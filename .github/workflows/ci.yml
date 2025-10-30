@@ -19,8 +19,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Compilar el proyecto
-        run: javac src/main/java/Calculadora.java src/test/java/CalculadoraTest.java
+      - name: Compilar a carpeta build
+        run: |
+          mkdir -p build
+          javac -d build src/main/java/Calculadora.java src/test/java/CalculadoraTest.java
 
       - name: Ejecutar pruebas
-        run: java -ea -cp .:src/main/java:src/test/java CalculadoraTest
+        run: java -ea -cp build CalculadoraTest
