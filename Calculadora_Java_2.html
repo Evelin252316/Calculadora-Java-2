@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculadora Avanzada</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <main class="card" role="application" aria-label="Calculadora de operaciones básicas">
+      <header>
+        <div class="brand" aria-hidden="true">CA</div>
+        <div>
+          <div class="title">Calculadora Java 2</div>
+          
+        </div>
+        <div class="muted" style="margin-left:auto; font-size:0.8rem;"> CALC</div>
+      </header>
+
+      <section class="screen">
+        <div id="display" class="display" role="status" aria-live="polite">0</div>
+        <div id="subdisplay" class="subdisplay" aria-hidden="true"></div>
+      </section>
+
+      <section class="pad" aria-label="Teclado de la calculadora">
+        <!-- Row 1 -->
+        <button class="key danger" data-action="clear">C</button>
+        <button class="key" data-action="sign">±</button>
+        <button class="key" data-action="percent">%</button>
+        <button class="key op" data-op="/">÷</button>
+
+        <!-- Row 2 -->
+        <button class="key" data-digit="7">7</button>
+        <button class="key" data-digit="8">8</button>
+        <button class="key" data-digit="9">9</button>
+        <button class="key op" data-op="*">×</button>
+
+        <!-- Row 3 -->
+        <button class="key" data-digit="4">4</button>
+        <button class="key" data-digit="5">5</button>
+        <button class="key" data-digit="6">6</button>
+        <button class="key op" data-op="-">−</button>
+
+        <!-- Row 4 -->
+        <button class="key" data-digit="1">1</button>
+        <button class="key" data-digit="2">2</button>
+        <button class="key" data-digit="3">3</button>
+        <button class="key op" data-op="+">+</button>
+
+        <!-- Row 5 -->
+        <button class="key wide" data-digit="0">0</button>
+        <button class="key" data-digit=".">.</button>
+        <button class="key op" data-action="equals">=</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
